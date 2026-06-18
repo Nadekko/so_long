@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andjenna <andjenna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nadekko <nadekko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:34:43 by andjenna          #+#    #+#             */
-/*   Updated: 2024/02/20 17:44:41 by andjenna         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:00:35 by nadekko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 t_exit	*init_exit(t_game *game)
 {
 	t_exit	*exit;
-	int		i;
 
-	i = 0;
 	exit = ft_calloc(1, sizeof(t_exit));
 	if (!exit)
 		return (handle_error("Memory allocation failed."), NULL);
@@ -28,9 +26,6 @@ t_exit	*init_exit(t_game *game)
 
 t_coin	*init_coin(t_game *game)
 {
-	int	i;
-
-	i = 0;
 	game->coin = ft_calloc(1, sizeof(t_coin));
 	if (!game->coin)
 		handle_error("Memory allocation failed.");
@@ -54,9 +49,7 @@ t_monster	*init_monster(t_game *game)
 t_player	*init_player(t_game *game)
 {
 	t_player	*player;
-	int			i;
-
-	i = 0;
+	
 	player = ft_calloc(1, sizeof(t_player));
 	if (!player)
 		return (handle_error("Memory allocation failed."), NULL);

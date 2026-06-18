@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andjenna <andjenna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nadekko <nadekko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 14:56:55 by andjenna          #+#    #+#             */
-/*   Updated: 2024/02/26 13:06:52 by andjenna         ###   ########.fr       */
+/*   Updated: 2026/06/18 19:00:47 by nadekko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,7 @@ t_img	*init_img(t_game *game, char *path_image)
 t_wall	*init_wall(t_game *game)
 {
 	t_wall	*wall;
-	int		i;
-
-	i = 0;
+	
 	(void)game;
 	wall = ft_calloc(1, sizeof(t_wall));
 	if (!wall)

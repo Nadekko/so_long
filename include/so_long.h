@@ -6,7 +6,7 @@
 /*   By: andjenna <andjenna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 13:20:44 by andjenna          #+#    #+#             */
-/*   Updated: 2024/02/22 15:45:07 by andjenna         ###   ########.fr       */
+/*   Updated: 2026/06/18 18:35:10 by andjenna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../libft/ft_printf/ft_printf.h"
 # include "../libft/get_next_line/get_next_line.h"
 # include "../libft/libft.h"
-# include "../minilibx/mlx.h"
+# include "mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <dirent.h>
@@ -105,6 +105,7 @@ typedef struct s_game
 	void			*win;
 	int				height;
 	int				width;
+	int				idl_flag;
 	time_t			last_keypress;
 	t_coord			coord;
 	t_map			*map;
