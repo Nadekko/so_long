@@ -1,40 +1,49 @@
 DEF_COLOR = \033[0;39m
-RED = \033[0;91m
-YELLOW = \033[0;93m
-GREEN = \033[0;92m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
-PURPLE= \033[38;2;255;105;180m
-RESET= \033[0m
+RED       = \033[0;91m
+YELLOW    = \033[0;93m
+GREEN     = \033[0;92m
+BLUE      = \033[0;94m
+MAGENTA   = \033[0;95m
+CYAN      = \033[0;96m
+WHITE     = \033[0;97m
+PURPLE    = \033[38;2;255;105;180m
+RESET     = \033[0m
 
-CC = cc
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror
 
-CFLAGS = -Wall -Werror -Wextra
+NAME    = libftprintf.a
 
-SRCS = ft_printf.c ft_printf_aff.c ft_printf_nbr.c ft_printf_utils.c ft_printf_unsign.c
+SRCS = \
+	ft_printf.c \
+	ft_printf_aff.c \
+	ft_printf_nbr.c \
+	ft_printf_utils.c \
+	ft_printf_unsign.c \
 
 OBJS = $(SRCS:.c=.o)
 
-NAME = libftprintf.a
-
 all: $(NAME)
-	@echo "$(RED)PRINTF COMPILED!$(DEF_COLOR)"
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@echo "$(CYAN)Creating $(NAME)...$(DEF_COLOR)"
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
+	@echo "$(GREEN)PRINTF COMPILED!$(DEF_COLOR)"
 
 %.o: %.c
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(BLUE)Compiling $<$(DEF_COLOR)"
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	@echo "$(YELLOW)Cleaning ft_printf objects...$(DEF_COLOR)"
 	@rm -f $(OBJS)
 
 fclean: clean
+	@echo "$(RED)Removing $(NAME)...$(DEF_COLOR)"
 	@rm -f $(NAME)
 
 re: fclean all
 
 .PHONY: all clean fclean re
+
