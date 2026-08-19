@@ -19,6 +19,7 @@
 # include "mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
+# include <sys/time.h>
 # include <dirent.h>
 # include <time.h>
 # include <termios.h>
@@ -138,6 +139,7 @@ void				print_image_info(t_img *img, const char *name);
 void				print_map(t_map *map);
 int					kbhit(void);
 int					is_idle(t_game *game, int sec);
+long long		get_time_ms(void);
 void				put_img_monster(t_game *game, int x, int y, int i);
 void				put_img_player(t_game *game, int x, int y, int i);
 void				put_img_exit(t_game *game, int x, int y, int i);
@@ -183,8 +185,10 @@ void				open_the_gate(t_game *game);
 void				print_moove(t_game *game);
 
 /*								ANIMATION							*/
-int					animation_collectible(t_game *game);
-int					animation_monster(t_game *game);
+// int					animation_collectible(t_game *game);
+// int					animation_monster(t_game *game);
+int				move_monsters(t_game *game);
+int				monster_sprite_base(int index);
 int					check_idle_and_start_animation(t_game *game,
 						int flag, int x, int y);
 void				img_interval(t_game *game, int interval);

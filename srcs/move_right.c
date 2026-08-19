@@ -14,6 +14,7 @@
 
 static void	set_move_right(t_game *game, int *flag)
 {
+	game->idl_flag = 1;
 	if (game->map->map[game->player->coord.y][game->player->coord.x + 1] == 'C')
 		game->coin->nb_coin--;
 	game->map->map[game->player->coord.y][game->player->coord.x] = '0';

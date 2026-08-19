@@ -12,6 +12,14 @@
 
 #include "../include/so_long.h"
 
+long long	get_time_ms(void)
+{
+	struct timeval	tv;
+
+	gettimeofday(&tv, NULL);
+	return ((long long)tv.tv_sec * 1000LL + (tv.tv_usec / 1000));
+}
+
 void	img_interval(t_game *game, int interval)
 {
 	mlx_do_sync(game->mlx);

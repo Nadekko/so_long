@@ -30,11 +30,11 @@ int	key_hook(int keycode, t_game *game)
 {
 	if (keycode == 65307)
 		exit_game(game);
-	else if (keycode == 119 || keycode == 65362)
+	else if (keycode == 119 || keycode == 122 || keycode == 65362) // up
 		move_up(game);
-	else if (keycode == 115 || keycode == 65364)
+	else if (keycode == 115 || keycode == 65364) // down
 		move_down(game);
-	else if (keycode == 97 || keycode == 65361)
+	else if (keycode == 97 || keycode == 113 || keycode == 65361) // left
 		move_left(game);
 	else if (keycode == 100 || keycode == 65363)
 		move_right(game);
@@ -47,13 +47,13 @@ int	key_release(int keycode, t_game *game)
 {
 	if (keycode == 65307)
 		exit_game(game);
-	else if (keycode == 119 || keycode == 65362)
+	else if (keycode == 119 || keycode == 122 || keycode == 65362) // up
 		return (0);
-	else if (keycode == 115 || keycode == 65364)
+	else if (keycode == 115 || keycode == 65364) // down
 		return (0);
-	else if (keycode == 97 || keycode == 65361)
+	else if (keycode == 97 || keycode == 113 || keycode == 65361) // left
 		return (0);
-	else if (keycode == 100 || keycode == 65363)
+	else if (keycode == 100 || keycode == 65363) // right
 		return (0);
 	return (1);
 }
@@ -73,8 +73,14 @@ int	animation(t_game *game)
 	else if (game->player->coord.x == game->exit->coord.x
 		&& game->player->coord.y == game->exit->coord.y)
 		flag = 2;
-	animation_collectible(game);
-	animation_monster(game);
+	if (move_monsters(game))
+		player_get_hit(game);
+	display_wall_floor(game);
+	display_exit(game);
+	display_player(game);
+	display_collectible(game);
+	display_monster(game);
+	display_health(game);
 	check_idle_and_start_animation(game, flag, x_p, y_p);
 	return (0);
 }

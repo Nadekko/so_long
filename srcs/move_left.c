@@ -14,6 +14,7 @@
 
 static void	set_move_left(t_game *game, int *flag)
 {
+	game->idl_flag = -1;
 	if (game->map->map[game->player->coord.y][game->player->coord.x - 1] == 'C')
 		game->coin->nb_coin--;
 	game->map->map[game->player->coord.y][game->player->coord.x] = '0';
@@ -21,7 +22,7 @@ static void	set_move_left(t_game *game, int *flag)
 	game->player->coord.x -= 1;
 	if (game->map->map[game->player->coord.y][game->player->coord.x] == 'M')
 		player_get_hit(game);
-	put_img_player(game, game->player->coord.x, game->player->coord.y, 9);
+	put_img_player(game, game->player->coord.x, game->player->coord.y, 8);
 	game->map->map[game->player->coord.y][game->player->coord.x] = 'P';
 	game->player->step++;
 	if (game->coin->nb_coin == 0 && !(*flag))

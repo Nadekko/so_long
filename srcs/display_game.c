@@ -72,7 +72,11 @@ void	display_player(t_game *game)
 {
 	int	i;
 	int	j;
+	int	frame;
 
+	frame = 0;
+	if (game->idl_flag == -1)
+		frame = 8;
 	i = 0;
 	while (i < game->map->height)
 	{
@@ -80,9 +84,8 @@ void	display_player(t_game *game)
 		while (j < game->map->width)
 		{
 			mlx_put_image_to_window(game->mlx, game->win,
-				game->player->img_player[0]->img,
+				game->player->img_player[frame]->img,
 				game->player->coord.x * 48, game->player->coord.y * 48);
-			mlx_loop_hook(game->mlx, check_idle_and_start_animation, game);
 			j++;
 		}
 		j = 0;
@@ -94,16 +97,29 @@ void	display_monster(t_game *game)
 {
 	int	i;
 	int	j;
+	int	frame;
+	int	monster_index;
+	long long	now;
 
+	now = get_time_ms();
+	frame = (now / 300) % 8;
 	i = 0;
+	monster_index = 0;
 	while (i < game->map->height)
 	{
 		j = 0;
 		while (j < game->map->width)
 		{
 			if (game->map->map[i][j] == 'M')
+			{
+				int sprite_base;
+
+				sprite_base = monster_sprite_base(monster_index);
 				mlx_put_image_to_window(game->mlx, game->win,
-					game->monster->img_monster[0]->img, j * 48, i * 48);
+					game->monster->img_monster[sprite_base + (frame % 4)]->img,
+					j * 48, i * 48);
+				monster_index++;
+			}
 			j++;
 		}
 		i++;

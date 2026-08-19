@@ -42,6 +42,7 @@ int	check_idle_and_start_animation(t_game *game, int flag, int x_p, int y_p)
 	{
 		if (kbhit())
 			game->last_keypress = time(NULL);
+		
 		put_img_player(game, x_p, y_p, 0);
 		img_interval(game, 100000);
 		put_img_player(game, x_p, y_p, 1);
@@ -65,7 +66,11 @@ void	display_collectible(t_game *game)
 {
 	int	i;
 	int	j;
+	int	frame;
+	long long	now;
 
+	now = get_time_ms();
+	frame = (now / 250) % 4;
 	i = 0;
 	while (i < game->map->height)
 	{
@@ -74,7 +79,7 @@ void	display_collectible(t_game *game)
 		{
 			if (game->map->map[i][j] == 'C')
 				mlx_put_image_to_window(game->mlx, game->win,
-					game->coin->img_coin[0]->img, j * 48, i * 48);
+					game->coin->img_coin[frame]->img, j * 48, i * 48);
 			j++;
 		}
 		i++;

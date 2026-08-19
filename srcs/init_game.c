@@ -93,6 +93,7 @@ t_game	*init_game(t_game **game, char *path_file)
 		return (free((*game)->map), free((*game)->mlx),
 			free((*game)), handle_error("mlx_new_window failed."), NULL);
 	(*game)->last_keypress = time(NULL);
+	(*game)->idl_flag = 1;
 	init_img_game(*game);
 	return ((*game));
 }
