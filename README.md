@@ -28,9 +28,10 @@ You will need to collect all gems to open the exit. On some map some skeleton ar
 - W/A/S/D (or Z/Q/S/D) or Arrow Keys: move
 - ESC: Exit
 
-## Demo 
-
-[Screenshots and video of gameplay to add]
+## Demo
+![Démo de l'animation](docs/demo_idle_animation.gif)
+![Démo de la partie gagnée](docs/demo_exit.gif)
+![Démo de la mort du personnage](docs/demo_death.gif)
 
 ## Grade
 
