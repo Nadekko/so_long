@@ -29,9 +29,14 @@ You will need to collect all gems to open the exit. On some map some skeleton ar
 - ESC: Exit
 
 ## Demo
-![Démo de l'animation](demo/demo_idle_animation.gif)
-![Démo de la partie gagnée](demo/demo_exit.gif)
-![Démo de la mort du personnage](demo/demo_death.gif)
+
+<p align="center">
+  <img src="demo/demo_idle_animation.gif" width="45%" alt="Idle animation">
+</p>
+<p align="center">
+  <img src="demo/demo_exit.gif" width="45%" alt="End win">
+  <img src="demo/demo_death.gif" width="45%" alt="Death">
+</p>
 
 ## Grade
 
