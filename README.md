@@ -1,6 +1,6 @@
 # SO_LONG
 
-So_long is a project from 42 Paris school. It's a little game in 2D coding in C.
+So_long is a project from 42 Paris school. It's a little game in 2D coding in C using the MiniLibX library.
 
 ## Installation
 
