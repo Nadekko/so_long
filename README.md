@@ -107,6 +107,16 @@ All graphical assets come from independent artists on [itch.io](https://itch.io/
 | Brick and grass floor | [Pixel Art Top Down - Basic](https://cainos.itch.io/pixel-art-top-down-basic) | [Cainos](https://cainos.itch.io/) |
 | Doors (exit) | [Peasants House](https://manjarcraft.itch.io/peasants-house) | [ManjarCraft](https://manjarcraft.itch.io/) |
 
+### Libraries and school
+
+- [MiniLibX](https://github.com/42Paris/minilibx-linux): graphics library provided by 42
+- [42 Paris](https://42.fr/): project subject and framework
+
 ## License
 
-The game assets belong to their respective authors and are subject to the licenses listed on their itch.io pages (see [Credits](#credits)). MiniLibX is provided by 42 and distributed under its own license; see its repository for details.
+The source code of this project is released under the [MIT License](LICENSE).
+
+This license does not cover third-party content:
+
+- The game assets belong to their respective authors and are subject to the licenses listed on their itch.io pages (see [Credits](#credits)).
+- MiniLibX is provided by 42 and distributed under its own license; see its repository for details.
