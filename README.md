@@ -107,11 +107,6 @@ All graphical assets come from independent artists on [itch.io](https://itch.io/
 | Brick and grass floor | [Pixel Art Top Down - Basic](https://cainos.itch.io/pixel-art-top-down-basic) | [Cainos](https://cainos.itch.io/) |
 | Doors (exit) | [Peasants House](https://manjarcraft.itch.io/peasants-house) | [ManjarCraft](https://manjarcraft.itch.io/) |
 
-### Libraries and school
-
-- [MiniLibX](https://github.com/42Paris/minilibx-linux): graphics library provided by 42
-- [42 Paris](https://42.fr/): project subject and framework
-
 ## License
 
 The source code of this project is released under the [MIT License](LICENSE).
