@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="demo/demo_win.gif" width="45%" alt="Win screen">
+  <img src="demo/demo_death.gif" width="45%" alt="Death screen">
+</p>
+
 # SO_LONG
 
 So_long is a project from the 42 Paris Common Core. It's a small 2D game written in C using the MiniLibX library, designed to introduce low-level graphics programming: opening a window, drawing sprites, handling keyboard input and running a game loop.
@@ -5,7 +10,6 @@ So_long is a project from the 42 Paris Common Core. It's a small 2D game written
 ## Table of Contents
 
 1. [Description](#description)
-2. [Demo](#demo)
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Controls](#controls)
@@ -29,16 +33,6 @@ As a 42 project, it follows the school's strict coding rules (the Norm): limited
 - Map validation before the game starts
 - Random map support
 - Win and death screens
-
-## Demo
-
-<p align="center">
-  <img src="demo/demo_idle_animation.gif" width="45%" alt="Idle animation">
-</p>
-<p align="center">
-  <img src="demo/demo_exit.gif" width="45%" alt="Win screen">
-  <img src="demo/demo_death.gif" width="45%" alt="Death screen">
-</p>
 
 ## Installation
 
